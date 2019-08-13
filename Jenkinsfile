@@ -14,6 +14,7 @@ pipeline {
       }
     }
     stage('Test') {
+      error 'fake error to force failure in test stage/gate'
       when {
         beforeAgent true
         branch 'test'
